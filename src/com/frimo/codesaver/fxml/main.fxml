@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.frimo.codesaver.controlls.AppTreeView?>
+<?import com.frimo.codesaver.controlls.AppTabPane?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+       <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+           <menus>
+               <Menu mnemonicParsing="false" text="File">
+                   <items>
+                       <MenuItem mnemonicParsing="false" onAction="#pressNewProject" text="New project" />
+                       <MenuItem mnemonicParsing="false" onAction="#exportCode" text="Export code">
+                           <accelerator>
+                               <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                       </MenuItem>
+                       <MenuItem mnemonicParsing="false" onAction="#pressOpenSettings" text="Settings">
+                           <accelerator>
+                               <KeyCodeCombination alt="DOWN" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                       </MenuItem>
+                   </items>
+               </Menu>
+               <Menu mnemonicParsing="false" text="Edit">
+                   <items>
+                       <MenuItem mnemonicParsing="false" onAction="#pressSave" text="Save">
+                           <accelerator>
+                               <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                       <MenuItem mnemonicParsing="false" onAction="#pressSaveAll" text="Save all">
+                           <accelerator>
+                               <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator></MenuItem>
+                   </items>
+               </Menu>
+               <Menu mnemonicParsing="false" text="Help">
+                   <items>
+                       <MenuItem mnemonicParsing="false" text="About" />
+                   </items>
+               </Menu>
+           </menus>
+       </MenuBar>
+   </top>
+   <center>
+       <SplitPane fx:id="splitPane" dividerPositions="0.3" prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+           <items>
+               <AppTreeView fx:id="treeView" editable="true" prefHeight="200.0" prefWidth="200.0">
+
+               </AppTreeView>
+               <!--<TreeView fx:id="treeView" editable="true" prefHeight="200.0" prefWidth="200.0">
+
+               </TreeView>-->
+               <AppTabPane fx:id="tabPane" />
+           </items>
+           <VBox.margin>
+               <Insets />
+           </VBox.margin>
+       </SplitPane>
+   </center>
+</BorderPane>
