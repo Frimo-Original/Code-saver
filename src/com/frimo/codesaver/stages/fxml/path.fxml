@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" vgap="10.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label fx:id="pathLabel" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="textField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="0" />
+        <CheckBox fx:id="checkBox" mnemonicParsing="false" text="(default)" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.rowSpan="1" />
+        <Button fx:id="buttonOk" mnemonicParsing="false" onAction="#pressOk" text="Ok" GridPane.rowIndex="2" />
+        <Button mnemonicParsing="false" onAction="#pressCancel" text="Cancel" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" onAction="#browse" prefHeight="25.0" prefWidth="66.0" text="Browse..." GridPane.columnIndex="2" GridPane.rowIndex="1" />
+    </children>
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+      <RowConstraints />
+    </rowConstraints>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+</GridPane>

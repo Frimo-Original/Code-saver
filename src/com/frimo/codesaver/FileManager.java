@@ -31,7 +31,11 @@ public class FileManager
     }
 
     public void write(String path, String text) throws IOException {
-        FileWriter writer = new FileWriter(new File(path));
+        write(new File(path), text);
+    }
+
+    public void write(File file, String text) throws IOException {
+        FileWriter writer = new FileWriter(file);
         writer.write(text);
         writer.close();
     }
